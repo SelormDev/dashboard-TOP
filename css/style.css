@@ -6,20 +6,107 @@
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-columns: 1fr 4fr 1.2fr;
   grid-template-rows: 1fr 2fr 2fr;
   grid-template-areas:
     "aside header header"
     "aside projects announcements"
     "aside projects trending";
-  gap: 10px;
   height: 100vh;
   border: 2px solid black;
 }
 
 .side-bar {
   grid-area: aside;
-  background-color: aqua;
+  background-color: #1992d4;
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.4fr 1.1fr 1fr;
+  gap: 10px;
+}
+
+.side-bar .nav ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ul li {
+  display: flex;
+  align-items: center;
+  margin: 3px 0;
+}
+
+ul li:hover {
+  background-color: #0e6ea8;
+  border-radius: 10px;
+}
+
+a,
+.dashboard {
+  font-size: 1.4rem;
+}
+
+.logo-container {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex: 1;
+}
+
+.logo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-areas:
+    "upper-left upper-right"
+    "upper-left upper-right"
+    "upper-left lower-right"
+    "lower-left lower-right"
+    "lower-left lower-right";
+  width: 30px;
+  height: 30px;
+  gap: 4px;
+  margin: 0 10px 0 15px;
+}
+
+.logo-child {
+  background-color: white;
+}
+
+.upper-left {
+  grid-area: upper-left;
+}
+
+.upper-right {
+  grid-area: upper-right;
+}
+
+.lower-left {
+  grid-area: lower-left;
+}
+
+.lower-right {
+  grid-area: lower-right;
+}
+
+ul li {
+  list-style: none;
+  padding: 10px;
+  font-size: 1.2rem;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+}
+
+.i {
+  width: 10%;
+  filter: invert(100%);
+  margin: 0 10px;
 }
 
 .header {

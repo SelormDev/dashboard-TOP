@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-areas:
+    "aside header header"
+    "aside projects announcements"
+    "aside projects trending";
+  gap: 10px;
+  height: 100vh;
+  border: 2px solid black;
+}
+
+.side-bar {
+  grid-area: aside;
+  background-color: aqua;
+}
+
+.header {
+  grid-area: header;
+  background-color: blueviolet;
+}
+
+.projects-container {
+  grid-area: projects;
+  background-color: burlywood;
+}
+
+.announcement {
+  grid-area: announcements;
+  background-color: coral;
+}
+
+.trending {
+  grid-area: trending;
+  background-color: darkcyan;
+}

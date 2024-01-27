@@ -6,8 +6,8 @@
 
 .container {
   display: grid;
-  grid-template-columns: 1fr 4fr 1.2fr;
-  grid-template-rows: 1fr 2fr 2fr;
+  grid-template-columns: 1fr 3fr 1.2fr;
+  grid-template-rows: 0.7fr 2fr 2fr;
   grid-template-areas:
     "aside header header"
     "aside projects announcements"
@@ -125,6 +125,8 @@ li a {
   grid-template-areas:
     "search notification"
     "user button";
+  margin: 1rem;
+  gap: 1rem;
 }
 
 .search-icon {
@@ -151,62 +153,124 @@ li a {
 .notification-container {
   grid-area: notification;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
+  gap: 50px;
+}
+
+.notification-container img {
+  width: 5%;
 }
 
 .user-container {
   grid-area: user;
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0 10px;
 }
 
 .user-container img {
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+  width: 3%;
 }
 
 .user-container p {
   font-size: 1.2rem;
   margin: 0 10px;
+  font-weight: bold;
 }
 
 .buttons-container {
   grid-area: button;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding: 0 10px;
+  gap: 30px;
 }
 
-/* .upper-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
-} */
-
-/* .search {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-radius: 5px;
-} */
+.btn {
+  width: 130px;
+  text-align: center;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: white;
+  background-color: #1992d4;
+}
 
 .projects-container {
   grid-area: projects;
-  background-color: burlywood;
+  background-color: #e2e8f0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 1.1fr;
+}
+
+.projects-container h2 {
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  padding: 10px;
+}
+
+.project {
+  background-color: white;
+  border-left: 15px solid #f0b429;
+  border-radius: 5px;
 }
 
 .announcement {
   grid-area: announcements;
-  background-color: coral;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.2fr 1fr;
+  background-color: #e2e8f0;
+}
+
+.announcement h2 {
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.announcement-cards {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+}
+
+.card {
+  height: 100%;
+  padding: 10px;
+  border-bottom: 1px solid #e2e8f0;
 }
 
 .trending {
   grid-area: trending;
-  background-color: darkcyan;
+  background-color: #e2e8f0;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 0.1fr 1fr;
+}
+
+.trending h2 {
+  padding: 10px;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.trending-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
 }
